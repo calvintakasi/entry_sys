@@ -14,18 +14,18 @@ if($conn->connect_error){
     die('Connection Failed: ' .$conn->connect_error);
 }
 else{
-    $database = $conn->prepare("insert into studententry(id , name , purpose , mob , date , intime , outtime)
+    $db_stmt = $conn->prepare("insert into studententry(id , name , purpose , mob , date , intime , outtime)
     values(?, ?, ?, ?, ? ,? ,?)");
-    $database->bind_param("issssss", $id , $name , $purpose , $mob , $date , $intime , $outtime);
+    $db_stmt->bind_param("issssss", $id , $name , $purpose , $mob , $date , $intime , $outtime);
 
 // i - integer
 // s - string
 
 // Execute the prepared databse statement
-$database->execute();
+$db_stmt->execute();
 
 // Close the prepared database statement
-$database->close();
+$db_stmt->close();
 
 //close the connection
 $conn->close();
