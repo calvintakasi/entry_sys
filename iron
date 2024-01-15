@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Attendence Management System</title>
+        <link rel="stylesheet"href="gg.css">
+    </head>
+    <body>
+    <div>
+    <form method="POST" action="iron_conn.php">
+        
+           <div class="title"><u>ATTENDENCE MANAGEMENT SYSTEM</u></div>
+           <div class=inputs>
+              <input type="number" placeholder="Student ID" name="s_id"><br><br>
+              <input type=text placeholder=" Name" name="name"><br><br>
+             <input type=text placeholder="Department" name="dep"><br><br>
+             <input type="email" placeholder="Email"name="email"><br><br>
+             <input type="password" placeholder="Roll No." name="roll"><br><br>
+              <input type="number" name="num" placeholder="Mobile Number"><br><br>
+              <input type="date" name="date" placeholder="Date">
+        
+           
+              
+              <input type="radio" name="attendence" value="Absent" id="absent">
+              <label for="Absent">Absent</label>
+              <input type="radio" name="attendence" value="Present" id="present">
+              <label for="Present">Present</label>
+              <br><br>
+             </div>
+              
+              
+ 
+           <center>
+         <button id="open">Mark Attendence</button>
+           </center>
+        </form>
+        
+     
+    </body>
+</html>
