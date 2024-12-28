@@ -1,14 +1,14 @@
 const form = document.getElementById('entryForm');
 const entriesList = document.getElementById('entriesList');
 
-// Store entries in memory (in a real app, this would be in a database)
+
 let entries = [];
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   
   const entry = {
-    id: Date.now(), // Simple way to generate unique IDs
+    id: Date.now(), 
     name: document.getElementById('name').value,
     purpose: document.getElementById('purpose').value,
     mobile: document.getElementById('mobile').value,
@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
     outTime: document.getElementById('outTime').value
   };
 
-  entries.unshift(entry); // Add new entry to the beginning of the array
+  entries.unshift(entry); 
   updateEntriesList();
   form.reset();
 });
