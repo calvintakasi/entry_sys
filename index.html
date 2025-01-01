@@ -1,54 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Entry Management System</title>
     <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <h1>Entry Management System</h1>
-      
-      <form id="entryForm">
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" required>
-        </div>
+        <h1>Entry Management System</h1>
+        
+        <form id="entryForm" action="conn.php" method="POST">
+            <div class="form-group">
+                <label for="id">ID:</label>
+                <input type="number" id="id" name="id" required>
+            </div>
 
-        <div class="form-group">
-          <label for="purpose">Purpose:</label>
-          <input type="text" id="purpose" required>
-        </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
 
-        <div class="form-group">
-          <label for="mobile">Mobile Number:</label>
-          <input type="tel" id="mobile" pattern="[0-9]{10}" required>
-        </div>
+            <div class="form-group">
+                <label for="purpose">Purpose:</label>
+                <input type="text" id="purpose" name="purpose" required>
+            </div>
 
-        <div class="form-group">
-          <label for="date">Date:</label>
-          <input type="date" id="date" required>
-        </div>
+            <div class="form-group">
+                <label for="mob">Mobile Number:</label>
+                <input type="tel" id="mob" name="mob" pattern="[0-9]{10}" required>
+            </div>
 
-        <div class="form-group">
-          <label for="inTime">In Time:</label>
-          <input type="time" id="inTime" required>
-        </div>
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
 
-        <div class="form-group">
-          <label for="outTime">Out Time:</label>
-          <input type="time" id="outTime" required>
-        </div>
+            <div class="form-group">
+                <label for="intime">In Time:</label>
+                <input type="time" id="intime" name="intime" required>
+            </div>
 
-        <button type="submit">Submit Entry</button>
-      </form>
+            <div class="form-group">
+                <label for="outtime">Out Time:</label>
+                <input type="time" id="outtime" name="outtime" required>
+            </div>
 
-      <div class="entries-section">
-        <h2>Recent Entries</h2>
-        <div id="entriesList"></div>
-      </div>
-    </div>
-    <script type="module" src="/main.js"></script>
-  </body>
+            <button type="submit">Submit Entry</button>
+        </form>
+</body>
 </html>
